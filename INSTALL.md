@@ -52,6 +52,14 @@ cd apex
 # as the newer version of apex does require newer pytorch versions. Ignore the hard reset otherwise.
 git reset --hard 3fe10b5597ba14a748ebb271a6ab97c09c5701ac
 
+# ERROR the version above does not compile!
+# Another version is suggested
+# https://github.com/NVIDIA/apex/issues/802#issuecomment-618699214
+git checkout f3a960f80244cf9e80558ab30f7f7e8cbf03c0a0
+
+# ERROR python complains about CUDA version!
+# Procees with caution and ignore this warning
+
 python setup.py install --cuda_ext --cpp_ext
 
 
